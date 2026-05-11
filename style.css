@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background-color: #1a4a2e;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+header h1 {
+    color: #f0b84a;
+    font-size: 24px;
+}
+header a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+.hero {
+    background-color: #2d7a4f;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+.heroh h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+.hero a {
+    background-color: #f0b84a;
+    color: #1a4a2e;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+.objectif {
+    padding: 40px 20px;
+    text-align: center;
+}
+.objectif h2 {
+    font-size: 28px;
+    color: #1a4a2a;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.cartes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.carte {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 1); 
+}
+.cart h3 {
+    color: #1a4a2e;
+    margin-bottom: 10px;
+}
+.Membres {
+    background-color: #1a4a2e;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+.Membres h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+.Membres p {
+    font-size: 16px;
+}
+.Contact {
+    background-color: #f0b84a;
+    padding: 40px 20px;
+    text-align: center;
+}
+.Contact h2 {
+    font-size: 28px;
+    color: #1a4a2e;
+    margin-bottom: 15px
+}
+.Contact p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.Contact a {
+    background-color: #1a4a2e;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+footer {
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+nav img {
+    height: 50px;
+    width: auto;
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.carte img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.avis {
+    background: #f9f9f9;
+    padding: 2rem;
+    text-align: center;
+}
+
+.avis input, .avis textarea {
+    display: block;
+    width: 60%;
+    margin: 0.8rem auto;
+    padding: 0.7rem;
+    border: 2px solid #1a6b2f;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.avis button {
+    background: #1a6b2f;
+    color: white;
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.sondage {
+    background: #f9f9f9;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.sondage h2 {
+    color: #1a6b2f;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.sondage p {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.sondage div {
+    text-align: left;
+    width: 50%;
+    margin: 0.6rem auto;
+    background: white;
+    padding: 0.8rem 1.2rem;
+    border: 2px solid #1a6b2f;
+    border-radius: 8px;
+}
+
+.sondage label {
+    color: #333;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+.sondage button {
+    background: #1a6b2f;
+    color: white;
+    padding: 0.8rem 2.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+.equipe {
+    padding: 3rem 2rem;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.equipe h2 {
+    color: #1a6b2f;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.equipe > p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.membre-carte {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+
+.membre-carte:hover {
+    transform: translateY(-4px);
+}
+
+.membre-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #1a6b2f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 1rem;
+}
+
+.membre-carte h3 {
+    color: #1a6b2f;
+    margin-bottom: 0.3rem;
+}
+
+.membre-carte .role {
+    color: #d4950a;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+.membre-carte img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    marker: 0 auto 1rem;
+    border: 3px solid #1a6b2f
+}

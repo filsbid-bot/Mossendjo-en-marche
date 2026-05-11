@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOSSENDJO EN MARCHE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <img src="logo.png" alt="logo">
+            <h1>Mossendjo en Marche</h1>
+            <a href="#hero">Accueil</a>
+            <a href="#objectifs">Objectif</a>
+            <a href="#membres">Membre</a>
+            <a href="#contact">Contact</a>
+            <a href="actualité/index.html">Actualités</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <h2>Ensemble pour Mossendjo</h2>
+        <p>90 membres engagés pour le développement de notre ville</p>
+        <a href="https://chat.whatsapp.com/Dkc6BusXzTYLy9Fkp2ut2B?mode=gi_t">Rejoindre le groupe whatsapp</a>
+    </section>
+
+    <section class="Objectif" id="objectifs">
+        <h2>Nos objectifs</h2>
+        <div class="cartes">
+            <div class="carte">
+                <h3>Education</h3>
+                <img src="image/postQueueImg_18.jpg" alt="Education a Mossendjo">
+                <p>Améliorer les écoles et soutenir les élèves de Mossendjo</p>
+            </div>
+            <div class="carte">
+                <h3>Entrepreneuriat</h3>
+                <img src="image/Screenshot_20260510-125034.jpg" alt="Entrepreneuriat a Mossendjo">
+                <p>Encouragé et accompagne les entrepreneurs locaux</p>
+            </div>
+            <div class="carte">
+                <h3>Formation des jeunes</h3>
+                <img src="image/Screenshot_20260510-125204~2.jpg" alt="Formation des jeunes a Mossendjo">
+                <p>Offrir des formations qualifiantes aux jeunes de la ville</p>
+            </div>
+            <div class="carte">
+                <h3>Environnement</h3>
+                <img src="image/Revival-of-Wheat-Farming-in-Lubero-2.jpg" alt="Environnement a Mossendjo">
+                <p>Promouvoir l'agriculture et protéger l'environnement</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="Membres" id="membres">
+        <h2>Nos membres</h2>
+        <div class="compteur">
+            <span id="compteur">90</span> membres engagés
+        </div>
+        <p>Venus de Mossendjo et de la diaspora, unis pour le développement de notre ville</p>
+    </section>
+
+    <section class="equipe">
+        <h2>Notre Équipe</h2>
+        <p>Les responsables du mouvement Mossendjo en Marche</p>
+        <div class="equipe-grid">
+
+            <div class="membre-carte">
+                <img src="image/IMG_20260206_123514_701~2 - Copie.jpg" alt="Président">
+                <h3>Rubén BIDOUNDA</h3>
+                <p class="role">Président</p>
+            </div>
+
+            <div class="membre-carte">
+                <img src="image/IMG-20260510-WA0217(1).jpg" alt="Vice-Président">
+                <h3>MBANI BEAUDE (BLANKO)</h3>
+                <p class="role">Vice-Président</p>
+            </div>
+
+            <div class="membre-carte">
+                <img src="image/IMG-20260510-WA0218 - Copie.jpg" alt="Secrétaire Général">
+                <h3>MBOU Hope</h3>
+                <p class="role">Secrétaire Général(e)</p>
+            </div>
+
+            <div class="membre-carte">
+                <img src="image/IMG-20260510-WA0093.jpg" alt="Trésorière">
+                <h3>Braule NZIHOU</h3>
+                <p class="role">Trésorière</p>
+            </div>
+
+            <div class="membre-carte">
+                <img src="image/IMG-20260511-WA0028.jpg" alt="Responsable de Communication">
+                <h3>Ronicel MOMBO</h3>
+                <p class="role">Responsable Communication</p>
+            </div>
+
+            <div class="membre-carte">
+                <img src="image/IMG-20260510-WA0237.jpg" alt="Conseiller du groupe">
+                <h3>Souverain KIMO</h3>
+                <p class="role">Conseiller du groupe</p>
+            </div>
+
+            <div class="membre-carte">
+                <img src="image/1774811368507.jpg" alt="Responsable Projets">
+                <h3>PACKA BRICE</h3>
+                <p class="role">Responsable Projets</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="avis">
+        <h2>Donnez votre avis</h2>
+        <input type="text" id="nom" placeholder="Votre prénom">
+        <textarea id="message" placeholder="Votre message..."></textarea>
+        <button onclick="publier()">Publier</button>
+        <div id="listeAvis"></div>
+    </section>
+
+    <section class="sondage">
+        <h2>Sondage</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScacbBTXO-rC-nvFJoRQgTURx58mIve5dS0GgGr1JAGxASTYA/viewform?embedded=true" width="100%" height="500" frameborder="0">Chargement…</iframe>
+    </section>
+
+    <section class="Contact" id="contact">
+        <h2>Nous Rejoindre</h2>
+        <p>Tu veux contribuer au développement de Mossendjo ?</p>
+        <a href="https://chat.whatsapp.com/Dkc6BusXzTYLy9Fkp2ut2B?mode=gi_t">Rejoindre sur whatsapp</a>
+        <div class="don">
+            <h3>💚 Soutenir Mossendjo en Marche</h3>
+            <p>Contribuez au développement de notre ville</p>
+            <a href="https://wa.me/242068265686?text=Bonjour%2C%20je%20souhaite%20faire%20un%20don%20pour%20Mossendjo%20en%20Marche" target="_blank">💛 Don via MTN MoMo</a>
+            <br><br>
+            <a href="https://wa.me/242053784272?text=Bonjour%2C%20je%20souhaite%20faire%20un%20don%20pour%20Mossendjo%20en%20Marche" target="_blank">❤️ Don via Airtel Money</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>2026 Mossendjo en marche. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        function publier() {
+            const nom = document.getElementById('nom').value;
+            const message = document.getElementById('message').value;
+            if (!nom || !message) {
+                alert('Remplissez votre prénom et votre message.');
+                return;
+            }
+            const avis = JSON.parse(localStorage.getItem('avis') || '[]');
+            avis.push({ nom, message });
+            localStorage.setItem('avis', JSON.stringify(avis));
+            document.getElementById('nom').value = '';
+            document.getElementById('message').value = '';
+            afficherAvis();
+        }
+
+        function afficherAvis() {
+            const avis = JSON.parse(localStorage.getItem('avis') || '[]');
+            const liste = document.getElementById('listeAvis');
+            liste.innerHTML = '';
+            avis.forEach(a => {
+                liste.innerHTML += '<p><strong>' + a.nom + '</strong> : ' + a.message + '</p>';
+            });
+        }
+
+        afficherAvis();
+    </script>
+
+</body>
+</html>
