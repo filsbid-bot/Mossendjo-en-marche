@@ -3,124 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f3d1a">
+    <meta name="description" content="Mossendjo en Marche - Mouvement citoyen pour le développement de Mossendjo">
+    <link rel="manifest" href="manifest.json">
     <title>MOSSENDJO EN MARCHE</title>
-   <link rel="stylesheet" href="style.css">
-<link rel="manifest" href="manifest.json?v=3">
-<link rel="icon" type="image/png" href="logo.png.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <img src="logo.png.png" alt="logo">
-            <h1>Mossendjo en Marche</h1>
-            <a href="#hero">Accueil</a>
-            <a href="#objectifs">Objectif</a>
-            <a href="#membres">Membre</a>
+    <!-- BARRE DE NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">
+            <img src="logo.png" alt="Logo Mossendjo en Marche">
+            <span>Mossendjo en Marche</span>
+        </div>
+        <div class="nav-links">
+            <a href="#accueil">Accueil</a>
+            <a href="#objectifs">Objectifs</a>
+            <a href="#membres">Membres</a>
+            <a href="#equipe">Équipe</a>
+            <a href="#regles">Règles</a>
             <a href="#contact">Contact</a>
-            <a href="actualité/index.html">Actualités</a>
-        </nav>
-    </header>
+            <a href="actualites.html" class="nav-actu">Actualités</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
 
-    <section class="hero" id="hero">
-        <h2>Ensemble pour Mossendjo</h2>
-        <p>90 membres engagés pour le développement de notre ville</p>
-        <a href="https://chat.whatsapp.com/Dkc6BusXzTYLy9Fkp2ut2B?mode=gi_t">Rejoindre le groupe whatsapp</a>
+    <!-- HERO -->
+    <section class="hero" id="accueil">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge">🇨🇬 République du Congo · Mossendjo</div>
+            <h1>Ensemble pour<br><span class="highlight">Mossendjo</span></h1>
+            <p>Un mouvement citoyen uni par l'amour de notre ville, pour bâtir un avenir meilleur ensemble.</p>
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <div class="stat-num" id="compteur-hero">0</div>
+                    <div class="stat-label">Membres actifs</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">5</div>
+                    <div class="stat-label">Domaines d'action</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">2026</div>
+                    <div class="stat-label">Année de lancement</div>
+                </div>
+            </div>
+            <div class="hero-btns">
+                <a href="https://chat.whatsapp.com/Dkc6BusXzTYLy9Fkp2ut2B?mode=gi_t" class="btn-primary">📲 Rejoindre le groupe</a>
+                <a href="#objectifs" class="btn-secondary">Découvrir →</a>
+            </div>
+        </div>
+        <div class="hero-scroll">↓</div>
     </section>
 
-    <section class="Objectif" id="objectifs">
-        <h2>Nos objectifs</h2>
-        <div class="cartes">
-            <div class="carte">
-                <h3>Education</h3>
-                <img src="image/postQueueImg_18.jpg" alt="Education a Mossendjo">
-                <p>Améliorer les écoles et soutenir les élèves de Mossendjo</p>
-            </div>
-            <div class="carte">
-                <h3>Entrepreneuriat</h3>
-                <img src="image/Screenshot_20260510-125034.jpg" alt="Entrepreneuriat a Mossendjo">
-                <p>Encouragé et accompagne les entrepreneurs locaux</p>
-            </div>
-            <div class="carte">
-                <h3>Formation des jeunes</h3>
-                <img src="image/Screenshot_20260510-125204~2.jpg" alt="Formation des jeunes a Mossendjo">
-                <p>Offrir des formations qualifiantes aux jeunes de la ville</p>
-            </div>
-            <div class="carte">
-                <h3>Environnement</h3>
-                <img src="image/Revival-of-Wheat-Farming-in-Lubero-2.jpg" alt="Environnement a Mossendjo">
-                <p>Promouvoir l'agriculture et protéger l'environnement</p>
+    <!-- BIENVENUE -->
+    <section class="bienvenue" id="bienvenue">
+        <div class="container">
+            <div class="bienvenue-card">
+                <h2>🌿 Bienvenue dans Mossendjo en Marche !</h2>
+                <p class="intro">Cher(e) nouveau(elle) membre, nous sommes heureux(se) de vous accueillir dans ce mouvement né de l'amour que nous portons à notre ville — <strong>Mossendjo</strong>.</p>
+
+                <div class="bienvenue-grid">
+                    <div class="bv-item">
+                        <div class="bv-icon">📌</div>
+                        <h3>Qui sommes-nous ?</h3>
+                        <p>Mossendjo en Marche est un mouvement de jeunes ressortissants de Mossendjo unis par une vision commune : contribuer activement au développement de notre ville.</p>
+                    </div>
+                    <div class="bv-item">
+                        <div class="bv-icon">🎯</div>
+                        <h3>Nos domaines d'action</h3>
+                        <ul>
+                            <li>L'éducation et la scolarité</li>
+                            <li>La santé des populations</li>
+                            <li>La formation qualifiante des jeunes</li>
+                            <li>Le développement économique et numérique</li>
+                            <li>L'environnement et l'agriculture</li>
+                        </ul>
+                    </div>
+                    <div class="bv-item">
+                        <div class="bv-icon">📋</div>
+                        <h3>Nos valeurs</h3>
+                        <p>Solidarité, engagement, respect, innovation et amour de Mossendjo.</p>
+                    </div>
+                    <div class="bv-item">
+                        <div class="bv-icon">⚙️</div>
+                        <h3>Comment on fonctionne</h3>
+                        <ul>
+                            <li>Réunions virtuelles deux fois par semaine</li>
+                            <li>Contenu utile produit chaque semaine</li>
+                            <li>Chaque membre a un rôle actif</li>
+                            <li>Discussions internes confidentielles</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bienvenue-cta">
+                    <div class="bv-icon">🚀</div>
+                    <p>Nous venons de lancer le mouvement. Tu arrives au bon moment — tout est encore à construire et ta contribution compte énormément. <strong>Présente-toi au groupe. Bienvenue dans la marche.</strong></p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="Membres" id="membres">
-        <h2>Nos membres</h2>
-        <div class="compteur">
-            <span id="compteur">90</span> membres engagés
-        </div>
-        <p>Venus de Mossendjo et de la diaspora, unis pour le développement de notre ville</p>
-    </section>
-
-    <section class="equipe">
-        <h2>Notre Équipe</h2>
-        <p>Les responsables du mouvement Mossendjo en Marche</p>
-        <div class="equipe-grid">
-
-            <div class="membre-carte">
-                <img src="image/IMG_20260206_123514_701~2 - Copie.jpg" alt="Président">
-                <h3>Rubén BIDOUNDA</h3>
-                <p class="role">Président</p>
+    <!-- OBJECTIFS -->
+    <section class="objectifs" id="objectifs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">🎯 Notre mission</span>
+                <h2>Nos objectifs</h2>
+                <p>Cinq piliers pour construire le Mossendjo de demain</p>
             </div>
-
-            <div class="membre-carte">
-                <img src="image/IMG-20260510-WA0217(1).jpg" alt="Vice-Président">
-                <h3>MBANI BEAUDE (BLANKO)</h3>
-                <p class="role">Vice-Président</p>
+            <div class="cartes-grid">
+                <div class="carte">
+                    <img src="image/postQueueImg_18.jpg" alt="Education">
+                    <div class="carte-body">
+                        <div class="carte-icon">📚</div>
+                        <h3>Éducation</h3>
+                        <p>Améliorer les écoles et soutenir les élèves de Mossendjo avec des ressources et du mentorat.</p>
+                    </div>
+                </div>
+                <div class="carte">
+                    <img src="image/Screenshot_20260510-125034.jpg" alt="Entrepreneuriat">
+                    <div class="carte-body">
+                        <div class="carte-icon">💼</div>
+                        <h3>Entrepreneuriat</h3>
+                        <p>Encourager et accompagner les entrepreneurs locaux pour stimuler l'économie de la ville.</p>
+                    </div>
+                </div>
+                <div class="carte">
+                    <img src="image/Screenshot_20260510-125204~2.jpg" alt="Formation">
+                    <div class="carte-body">
+                        <div class="carte-icon">🎓</div>
+                        <h3>Formation des jeunes</h3>
+                        <p>Offrir des formations qualifiantes aux jeunes pour construire leur avenir.</p>
+                    </div>
+                </div>
+                <div class="carte">
+                    <img src="image/Revival-of-Wheat-Farming-in-Lubero-2.jpg" alt="Environnement">
+                    <div class="carte-body">
+                        <div class="carte-icon">🌿</div>
+                        <h3>Environnement</h3>
+                        <p>Promouvoir l'agriculture durable et protéger l'environnement naturel de Mossendjo.</p>
+                    </div>
+                </div>
+                <div class="carte carte-sante">
+                    <div class="carte-body">
+                        <div class="carte-icon">🏥</div>
+                        <h3>Santé</h3>
+                        <p>Améliorer l'accès aux soins de santé pour toutes les populations de Mossendjo.</p>
+                    </div>
+                </div>
             </div>
-
-            <div class="membre-carte">
-                <img src="image/IMG-20260510-WA0218 - Copie.jpg" alt="Secrétaire Général">
-                <h3>MBOU Hope</h3>
-                <p class="role">Secrétaire Général(e)</p>
-            </div>
-
-            <div class="membre-carte">
-                <img src="image/IMG-20260510-WA0093.jpg" alt="Trésorière">
-                <h3>Braule NZIHOU</h3>
-                <p class="role">Trésorière</p>
-            </div>
-
-            <div class="membre-carte">
-                <img src="image/IMG-20260511-WA0028.jpg" alt="Responsable de Communication">
-                <h3>Ronicel MOMBO</h3>
-                <p class="role">Responsable Communication</p>
-            </div>
-
-            <div class="membre-carte">
-                <img src="image/IMG-20260510-WA0237.jpg" alt="Conseiller du groupe">
-                <h3>Souverain KIMO</h3>
-                <p class="role">Conseiller du groupe</p>
-            </div>
-
-            <div class="membre-carte">
-                <img src="image/1774811368507.jpg" alt="Responsable Projets">
-                <h3>PACKA BRICE</h3>
-                <p class="role">Responsable Projets</p>
-            </div>
-
         </div>
     </section>
 
-    <section class="avis">
-        <h2>Donnez votre avis</h2>
-        <input type="text" id="nom" placeholder="Votre prénom">
-        <textarea id="message" placeholder="Votre message..."></textarea>
-        <button onclick="publier()">Publier</button>
-        <div id="listeAvis"></div>
+    <!-- COMPTEUR MEMBRES -->
+    <section class="membres-section" id="membres">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">👥 Notre communauté</span>
+                <h2>Nos membres</h2>
+            </div>
+            <div class="compteur-box">
+                <div class="grand-compteur" id="compteur-main">100</div>
+                <p>membres engagés venus de Mossendjo et de la diaspora</p>
+                <div class="compteur-barre">
+                    <div class="barre-progress" id="barre"></div>
+                </div>
+                <span class="compteur-label">Objectif : 200 membres</span>
+            </div>
+        </div>
     </section>
 
-    <section id="sondage" class="sondage-container">
+    <!-- ÉQUIPE -->
+    <section class="equipe" id="equipe">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">👑 Leadership</span>
+                <h2>Notre Équipe</h2>
+                <p>Les responsables du mouvement Mossendjo en Marche</p>
+            </div>
+            <div class="equipe-grid">
+                <div class="membre-carte president">
+                    <div class="membre-photo">
+                        <img src="IMG_20260206_123514_701~2 - Copie.jpg" alt="Président">
+                    </div>
+                    <h3>Rubén BIDOUNDA</h3>
+                    <p class="role">🏆 Président</p>
+                </div>
+                <div class="membre-carte">
+                    <div class="membre-photo">
+                        <img src="IMG-20260510-WA0217(1).jpg" alt="Vice-Président">
+                    </div>
+                    <h3>MBANI BEAUDE</h3>
+                    <p class="role-sub">alias BLANKO</p>
+                    <p class="role">Vice-Président</p>
+                </div>
+                <div class="membre-carte">
+                    <div class="membre-photo">
+                        <img src="IMG-20260510-WA0218 - Copie.jpg" alt="Secrétaire">
+                    </div>
+                    <h3>NBOU Hope</h3>
+                    <p class="role">Secrétaire Général(e)</p>
+                </div>
+                <div class="membre-carte">
+                    <div class="membre-photo">
+                        <img src="IMG-20260510-WA0093.jpg" alt="Trésorière">
+                    </div>
+                    <h3>Braule NZIHOU</h3>
+                    <p class="role">Trésorière</p>
+                </div>
+                <div class="membre-carte">
+                    <div class="membre-photo avatar">👤</div>
+                    <h3>Ronicel MOMBO</h3>
+                    <p class="role">Responsable Communication</p>
+                </div>
+                <div class="membre-carte">
+                    <div class="membre-photo">
+                        <img src="IMG-20260510-WA0237 - Copie.jpg" alt="Conseiller">
+                    </div>
+                    <h3>Souverain KIMO</h3>
+                    <p class="role">Conseiller du groupe</p>
+                </div>
+                <div class="membre-carte">
+                    <div class="membre-photo">
+                        <img src="1774811368507 - Copie.jpg" alt="Responsable Projets">
+                    </div>
+                    <h3>PACKA BRICE</h3>
+                    <p class="role">Responsable Projets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RÈGLES DU GROUPE -->
+    <section class="regles" id="regles">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">📜 Organisation</span>
+                <h2>Règles du groupe</h2>
+                <p>Pour un groupe efficace et respectueux</p>
+            </div>
+            <div class="regles-grid">
+                <div class="regle-carte">
+                    <div class="regle-num">01</div>
+                    <h3>🎯 L'Objectif</h3>
+                    <p>Le groupe est centré sur l'éducation et le développement de Mossendjo. Pas de hors-sujet, pas de débats politiques ou religieux.</p>
+                </div>
+                <div class="regle-carte">
+                    <div class="regle-num">02</div>
+                    <h3>🤝 Respect mutuel</h3>
+                    <p>Aucune insulte ni moquerie. Les messages sont limités entre 6h et 22h pour respecter le repos de chacun.</p>
+                </div>
+                <div class="regle-carte">
+                    <div class="regle-num">03</div>
+                    <h3>📱 Gestion des médias</h3>
+                    <p>Évitez les "Bonjour" inutiles. Interdiction de transférer des Fake News sans vérification.</p>
+                </div>
+                <div class="regle-carte">
+                    <div class="regle-num">04</div>
+                    <h3>🗳️ Décisions collectives</h3>
+                    <p>Le bureau centralise les idées. Pour les décisions importantes, on utilise les sondages WhatsApp.</p>
+                </div>
+            </div>
+            <div class="message-epingle">
+                <div class="epingle-icon">📌</div>
+                <div>
+                    <h4>Message épinglé du Président :</h4>
+                    <p>"Bienvenue ! Ici, on travaille pour l'avenir de nos enfants à Mossendjo. Respect pour tous. Pas de politique. Priorité aux projets concrets."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SONDAGE -->
+    <section class="sondage-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📊 Votre avis compte</span>
+                <h2>Sondage de la semaine</h2>
+                <p>Aidez-nous à prioriser nos actions</p>
+            </div>
+            <section id="sondage" class="sondage-container">
     <h2>Nouveau Sondage : Développement de Mossendjo</h2>
     <p>Selon vous, quel projet est le plus urgent ?</p>
     
@@ -132,35 +299,149 @@
     </form>
 </section>
 
-    <section class="Contact" id="contact">
-        <h2>Nous Rejoindre</h2>
-        <p>Tu veux contribuer au développement de Mossendjo ?</p>
-        <a href="https://chat.whatsapp.com/Dkc6BusXzTYLy9Fkp2ut2B?mode=gi_t">Rejoindre sur whatsapp</a>
-        <div class="don">
-            <h3>💚 Soutenir Mossendjo en Marche</h3>
-            <p>Contribuez au développement de notre ville</p>
-            <a href="https://wa.me/242068265686?text=Bonjour%2C%20je%20souhaite%20faire%20un%20don%20pour%20Mossendjo%20en%20Marche" target="_blank">💛 Don via MTN MoMo</a>
-            <br><br>
-            <a href="https://wa.me/242053784272?text=Bonjour%2C%20je%20souhaite%20faire%20un%20don%20pour%20Mossendjo%20en%20Marche" target="_blank">❤️ Don via Airtel Money</a>
+    <!-- AVIS -->
+    <section class="avis-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">💬 Témoignages</span>
+                <h2>Donnez votre avis</h2>
+                <p>Partagez votre message ou suggestion</p>
+            </div>
+            <div class="avis-form-box">
+                <input type="text" id="nom" placeholder="Votre prénom *">
+                <input type="text" id="ville" placeholder="Votre ville (ex: Mossendjo)">
+                <textarea id="message" placeholder="Votre message, suggestion ou témoignage..."></textarea>
+                <button onclick="publier()">📨 Publier mon avis</button>
+            </div>
+            <div class="avis-liste" id="listeAvis"></div>
         </div>
     </section>
 
+    <!-- APPLICATION -->
+    <section class="app-section">
+        <div class="container">
+            <div class="app-content">
+                <div class="app-text">
+                    <span class="section-tag">📱 Application</span>
+                    <h2>Installez notre application !</h2>
+                    <p>Mossendjo en Marche est maintenant disponible comme application sur votre téléphone. Accédez facilement à toutes les informations, sondages et actualités.</p>
+                    <ul class="app-features">
+                        <li>✅ Gratuit et sans abonnement</li>
+                        <li>✅ Fonctionne sur Android et iPhone</li>
+                        <li>✅ Notifications des actualités</li>
+                        <li>✅ Accès rapide au groupe WhatsApp</li>
+                    </ul>
+                    <button class="btn-install" id="installBtn" onclick="installerApp()">📲 Installer l'application</button>
+                    <p class="install-hint">Sur Chrome : Menu → "Ajouter à l'écran d'accueil"</p>
+                </div>
+                <div class="app-mockup">
+                    <div class="phone">
+                        <div class="phone-screen">
+                            <div class="phone-header">Mossendjo en Marche</div>
+                            <div class="phone-content">
+                                <div class="phone-stat">100+ membres</div>
+                                <div class="phone-menu">
+                                    <div>📚 Éducation</div>
+                                    <div>💼 Entrepreneuriat</div>
+                                    <div>🎓 Formation</div>
+                                    <div>🌿 Environnement</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">🤝 Rejoindre</span>
+                <h2>Nous Rejoindre</h2>
+                <p>Tu veux contribuer au développement de Mossendjo ?</p>
+            </div>
+            <div class="contact-btns">
+                <a href="https://chat.whatsapp.com/Dkc6BusXzTYLy9Fkp2ut2B?mode=gi_t" class="btn-whatsapp" target="_blank">💬 Rejoindre sur WhatsApp</a>
+            </div>
+            <div class="don-section">
+                <h3>💚 Soutenir le mouvement</h3>
+                <p>Contribuez au développement de notre ville via Mobile Money</p>
+                <div class="don-btns">
+                    <a href="https://wa.me/242068265686?text=Bonjour%2C%20je%20souhaite%20faire%20un%20don%20pour%20Mossendjo%20en%20Marche" target="_blank" class="btn-mtn">💛 Don via MTN MoMo</a>
+                    <a href="https://wa.me/242053784272?text=Bonjour%2C%20je%20souhaite%20faire%20un%20don%20pour%20Mossendjo%20en%20Marche" target="_blank" class="btn-airtel">❤️ Don via Airtel Money</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <p>2026 Mossendjo en marche. Tous droits réservés.</p>
+        <div class="footer-content">
+            <img src="logo.png.png" alt="Logo" class="footer-logo">
+            <p><strong>Mossendjo en Marche</strong></p>
+            <p>Unis pour le développement de notre ville</p>
+            <p class="footer-copy">© 2026 Mossendjo en Marche. Tous droits réservés.</p>
+        </div>
     </footer>
 
     <script>
+        // ── COMPTEUR ANIMÉ ──
+        function animerCompteur(id, cible, duree) {
+            let debut = 0;
+            const increment = cible / (duree / 16);
+            const el = document.getElementById(id);
+            const timer = setInterval(() => {
+                debut += increment;
+                if (debut >= cible) {
+                    el.textContent = cible + '+';
+                    clearInterval(timer);
+                } else {
+                    el.textContent = Math.floor(debut);
+                }
+            }, 16);
+        }
+
+        window.addEventListener('load', () => {
+            animerCompteur('compteur-hero', 100, 2000);
+            // Barre de progression
+            setTimeout(() => {
+                document.getElementById('barre').style.width = '50%';
+            }, 500);
+        });
+
+        // ── NAVBAR SCROLL ──
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // ── MENU HAMBURGER ──
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('open');
+        }
+
+        // ── AVIS ──
         function publier() {
-            const nom = document.getElementById('nom').value;
-            const message = document.getElementById('message').value;
+            const nom = document.getElementById('nom').value.trim();
+            const ville = document.getElementById('ville').value.trim();
+            const message = document.getElementById('message').value.trim();
             if (!nom || !message) {
-                alert('Remplissez votre prénom et votre message.');
+                alert('Merci de renseigner votre prénom et votre message.');
                 return;
             }
             const avis = JSON.parse(localStorage.getItem('avis') || '[]');
-            avis.push({ nom, message });
+            const now = new Date();
+            const mois = ['Jan','Fév','Mar','Avr','Mai','Juin','Juil','Août','Sep','Oct','Nov','Déc'];
+            avis.push({ nom, ville: ville || 'Congo', message, date: mois[now.getMonth()] + ' ' + now.getFullYear() });
             localStorage.setItem('avis', JSON.stringify(avis));
             document.getElementById('nom').value = '';
+            document.getElementById('ville').value = '';
             document.getElementById('message').value = '';
             afficherAvis();
         }
@@ -169,36 +450,39 @@
             const avis = JSON.parse(localStorage.getItem('avis') || '[]');
             const liste = document.getElementById('listeAvis');
             liste.innerHTML = '';
-            avis.forEach(a => {
-                liste.innerHTML += '<p><strong>' + a.nom + '</strong> : ' + a.message + '</p>';
+            [...avis].reverse().forEach(a => {
+                const init = a.nom.split(' ').map(x => x[0]).join('').slice(0,2).toUpperCase();
+                liste.innerHTML += `
+                    <div class="avis-carte">
+                        <div class="avis-avatar">${init}</div>
+                        <div class="avis-contenu">
+                            <div class="avis-nom">${a.nom} · <span>${a.ville}</span></div>
+                            <div class="avis-date">${a.date}</div>
+                            <div class="avis-texte">${a.message}</div>
+                        </div>
+                    </div>`;
             });
         }
 
         afficherAvis();
+
+        // ── PWA INSTALL ──
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            document.getElementById('installBtn').style.display = 'block';
+        });
+
+        function installerApp() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then(() => { deferredPrompt = null; });
+            } else {
+                alert('Pour installer : Menu de votre navigateur → "Ajouter à l\'écran d\'accueil"');
+            }
+        }
     </script>
-    <script>
-function voter() {
-    // On vérifie si un choix a été fait
-    const choix = document.querySelector('input[name="projet"]:checked');
-    
-    if (choix) {
-        alert("Merci Ruben ! Votre vote pour '" + choix.nextSibling.textContent.trim() + "' a bien été pris en compte.");
-    } else {
-        alert("Veuillez choisir une option avant d'envoyer.");
-    }
-}
-</script>
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('sw.js').then(function(registration) {
-        console.log('ServiceWorker enregistré avec succès !');
-      }, function(err) {
-        console.log('Échec de l\'enregistrement du ServiceWorker : ', err);
-      });
-    });
-  }
-</script>
 
 </body>
 </html>
