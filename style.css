@@ -1027,3 +1027,21 @@ footer {
 .carte-sante p { 
     color: rgba(255,255,255,0.85) !important; 
 }
+/* --- Zone de test pour mobile --- */
+@media (max-width: 768px) {
+    .hero-stats {
+        display: flex;
+        flex-direction: column; /* Force les blocs l'un sous l'autre */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .stat-box {
+        width: 80%; /* Prend presque toute la largeur du téléphone */
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 28px !important; /* Réduit le titre pour qu'il ne coupe pas */
+    }
+}
