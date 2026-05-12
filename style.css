@@ -294,36 +294,29 @@ nav {
 .btn-voter:hover {
     background-color: #218838;
 }
-/* Style pour harmoniser le Sondage avec la partie Avis */
 .sondage-container {
-    background-color: #f9f9f9; /* Fond très clair comme le haut */
-    border: 1px solid #ccc;    /* Bordure fine comme les zones de texte */
-    border-radius: 8px;        /* Bordures arrondies */
-    padding: 30px;
+    background-color: white;   /* Fond blanc comme les zones de texte */
+    border: 1px solid #000;    /* Bordure noire fine comme tes encadrés */
+    border-radius: 8px;        /* Arrondi identique */
+    padding: 20px;
     margin: 20px auto;
-    max-width: 800px;          /* Pour que ce ne soit pas trop large */
-    text-align: center;
-    font-family: Arial, sans-serif;
+    max-width: 90%;            /* S'adapte à la largeur de l'écran */
+    text-align: left;          /* Aligné à gauche comme tes textes */
 }
 
 .sondage-container h2 {
-    color: #2e7d32;            /* Le vert que tu utilises déjà */
-    margin-bottom: 15px;
-}
-
-.sondage-form {
-    display: inline-block;
-    text-align: left;          /* Aligne les boutons radio à gauche */
-    margin-top: 20px;
+    color: #2e7d32;
+    text-align: center;        /* Le titre reste au milieu */
+    font-size: 1.2rem;
 }
 
 .sondage-form label {
     display: block;
-    margin-bottom: 10px;
-    font-size: 16px;
-    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #eee;    /* Une petite ligne pour séparer les choix */
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
-
 /* Style du bouton pour qu'il ressemble au bouton "Publier" */
 .btn-voter {
     background-color: #2e7d32; 

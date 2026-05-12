@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOSSENDJO EN MARCHE</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">.
 </head>
 <body>
 
@@ -185,6 +186,17 @@ function voter() {
         alert("Veuillez choisir une option avant d'envoyer.");
     }
 }
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('sw.js').then(function(registration) {
+        console.log('ServiceWorker enregistré avec succès !');
+      }, function(err) {
+        console.log('Échec de l\'enregistrement du ServiceWorker : ', err);
+      });
+    });
+  }
 </script>
 
 </body>
