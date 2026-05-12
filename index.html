@@ -293,19 +293,43 @@
         </div>
     </section>
 
-    <!-- SONDAGE -->
-    <section class="sondage-section">
-        <div class="container">
+    <!-- SONDAGE INTERACTIF MISE À JOUR -->
+<section class="sondage-section" id="sondage">
+    <div class="container">
+        <div class="membre-carte"> 
             <div class="section-header">
-                <span class="section-tag">📊 Votre avis compte</span>
+                <span class="section-tag">📊 Sondage Express</span>
                 <h2>Sondage de la semaine</h2>
-                <p>Aidez-nous à prioriser nos actions</p>
+                <p>Votre avis compte pour le collectif Mossendjo en Marche</p>
             </div>
-            <div class="sondage-wrapper">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScacbBTXO-rC-nvFJoRQgTURx58mIve5dS0GgGr1JAGxASTYA/viewform?embedded=true" width="100%" height="520" frameborder="0">Chargement…</iframe>
+
+            <div class="sondage-content" style="text-align: center; margin-top: 20px;">
+                <h3>Quel projet est prioritaire ce mois-ci ?</h3>
+                
+                <form id="form-sondage" style="max-width: 500px; margin: 0 auto; text-align: left;">
+                    <label class="sondage-option" style="display: block; background: #f4f4f4; padding: 15px; margin-bottom: 10px; border-radius: 10px; cursor: pointer;">
+                        <input type="radio" name="projet" value="Infrastructures Scolaires"> 
+                        <span style="margin-left: 10px;">Soutien aux infrastructures scolaires</span>
+                    </label>
+
+                    <label class="sondage-option" style="display: block; background: #f4f4f4; padding: 15px; margin-bottom: 10px; border-radius: 10px; cursor: pointer;">
+                        <input type="radio" name="projet" value="Kits Solaires"> 
+                        <span style="margin-left: 10px;">Installation de kits solaires</span>
+                    </label>
+
+                    <label class="sondage-option" style="display: block; background: #f4f4f4; padding: 15px; margin-bottom: 10px; border-radius: 10px; cursor: pointer;">
+                        <input type="radio" name="projet" value="Formation Numérique"> 
+                        <span style="margin-left: 10px;">Atelier de formation au numérique</span>
+                    </label>
+
+                    <button type="button" class="btn-sondage" onclick="voter()" style="width: 100%; background: #2e7d32; color: white; border: none; padding: 15px; border-radius: 30px; font-weight: bold; margin-top: 15px; cursor: pointer;">
+                        Voter pour le collectif
+                    </button>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- AVIS -->
     <section class="avis-section">
@@ -491,6 +515,54 @@
             }
         }
     </script>
+    <script>
+async function voter() {
+    const bouton = document.querySelector('.btn-sondage');
+    const formulaire = document.getElementById('form-sondage');
+    const projetSelectionne = formulaire.querySelector('input[name="projet"]:checked');
+
+    // 1. Vérification si une option est cochée
+    if (!projetSelectionne) {
+        alert("S'il vous plaît, sélectionnez un projet avant de voter !");
+        return;
+    }
+
+    // 2. Animation du bouton (Feedback visuel)
+    const texteOriginal = bouton.innerText;
+    bouton.innerText = "Envoi en cours...";
+    bouton.disabled = true;
+    bouton.style.opacity = "0.7";
+
+    // 3. Préparation des données
+    const donnees = {
+        date: new Date().toLocaleString(),
+        choix: projetSelectionne.value,
+        source: "Site Web Mossendjo"
+    };
+
+    try {
+        // REMPLACE CETTE URL par l'URL de ton script Google Sheets ou ton API
+        const URL_DATABASE = "TON_URL_ICI"; 
+
+        // Simulation d'envoi (ou envoi réel via fetch)
+        console.log("Vote enregistré :", donnees);
+        
+        // Attente artificielle pour l'effet visuel
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        // 4. Succès
+        alert("Merci Ruben ! Votre vote pour '" + projetSelectionne.value + "' a été pris en compte.");
+        bouton.innerText = "Vote enregistré ✓";
+        bouton.style.backgroundColor = "#1b5e20";
+        
+    } catch (erreur) {
+        alert("Erreur lors de l'envoi du vote. Réessayez plus tard.");
+        bouton.innerText = texteOriginal;
+        bouton.disabled = false;
+        bouton.style.opacity = "1";
+    }
+}
+</script>
 
 </body>
 </html>

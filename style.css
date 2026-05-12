@@ -1009,3 +1009,81 @@ footer {
     .bienvenue-grid { grid-template-columns: 1fr; }
     .regles-grid { grid-template-columns: 1fr; }
 }
+/* --- SECTION SONDAGE --- */
+.sondage-section {
+    padding: 60px 0;
+    background-color: #fdfdfd;
+}
+
+/* On utilise la structure de tes cartes d'équipe */
+.sondage-content {
+    max-width: 600px;
+    margin: 30px auto 0;
+}
+
+.sondage-option {
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    margin-bottom: 12px;
+    background: #ffffff;
+    border: 2px solid #eeeeee;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Effet au survol des options */
+.sondage-option:hover {
+    border-color: #2e7d32;
+    background-color: #f1f8e9;
+}
+
+/* Style de l'input radio */
+.sondage-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #2e7d32; /* Couleur verte de Mossendjo */
+    cursor: pointer;
+}
+
+.sondage-option span {
+    margin-left: 15px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* --- LE BOUTON VOTE RÉACTIF --- */
+.btn-sondage {
+    width: 100%;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 35px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-sondage:hover {
+    background-color: #1b5e20;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+}
+
+.btn-sondage:active {
+    transform: translateY(0);
+}
+
+/* Style pour l'état "Envoi en cours" */
+.btn-sondage.loading {
+    background-color: #9e9e9e;
+    cursor: not-allowed;
+    transform: none;
+}
