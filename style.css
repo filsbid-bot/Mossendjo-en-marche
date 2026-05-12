@@ -268,3 +268,29 @@ nav {
     marker: 0 auto 1rem;
     border: 3px solid #1a6b2f
 }
+.sondage-container {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.sondage-form {
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.btn-voter {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-voter:hover {
+    background-color: #218838;
+}
