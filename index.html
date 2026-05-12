@@ -337,6 +337,40 @@
     <!-- APPLICATION -->
     <section class="app-section">
         <div class="container">
+            <script>
+// Ton lien vers la base de données Google
+const URL_DATABASE = "https://script.google.com/macros/s/AKfycbxHKEOF_sQEnEa3ppMenMY72qWNieZs6o2N1rsSqRSZBjTq-XT1M-uPAdo3i_mbj-A/exec";
+
+// FONCTION POUR LE SONDAGE (Ligne 294)
+async function voter() {
+    const btn = document.querySelector('.btn-sondage');
+    const options = document.getElementsByName('projet');
+    let choix = "";
+
+    for (const option of options) {
+        if (option.checked) { choix = option.value; break; }
+    }
+
+    if (!choix) { alert("⚠️ Choisis un projet !"); return; }
+
+    btn.disabled = true;
+    btn.innerText = "Envoi...";
+
+    try {
+        await fetch(URL_DATABASE, {
+            method: "POST",
+            mode: "no-cors",
+            body: JSON.stringify({ "type": "sondage", "projet": choix })
+        });
+        alert("✅ Vote enregistré dans Google Sheets !");
+    } catch (e) {
+        alert("❌ Erreur de connexion");
+    } finally {
+        btn.disabled = false;
+        btn.innerText = "Voter";
+    }
+}
+</script>
             <div class="app-content">
                 <div class="app-text">
                     <span class="section-tag">📱 Application</span>
