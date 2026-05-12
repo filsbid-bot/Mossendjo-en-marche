@@ -126,7 +126,7 @@
         <label><input type="radio" name="projet" value="ecole"> Réparation des bancs scolaires</label><br>
         <label><input type="radio" name="projet" value="eclairage"> Éclairage public</label><br>
         <label><input type="radio" name="projet" value="sante"> Pharmacie communautaire</label><br>
-        <button type="button" class="btn-voter">Envoyer mon avis</button>
+        <button type="button" class="btn-voter" onclick="voter()">Envoyer mon avis</button>
     </form>
 </section>
 
@@ -174,6 +174,18 @@
 
         afficherAvis();
     </script>
+    <script>
+function voter() {
+    // On vérifie si un choix a été fait
+    const choix = document.querySelector('input[name="projet"]:checked');
+    
+    if (choix) {
+        alert("Merci Ruben ! Votre vote pour '" + choix.nextSibling.textContent.trim() + "' a bien été pris en compte.");
+    } else {
+        alert("Veuillez choisir une option avant d'envoyer.");
+    }
+}
+</script>
 
 </body>
 </html>
