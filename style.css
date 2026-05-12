@@ -294,3 +294,49 @@ nav {
 .btn-voter:hover {
     background-color: #218838;
 }
+/* Style pour harmoniser le Sondage avec la partie Avis */
+.sondage-container {
+    background-color: #f9f9f9; /* Fond très clair comme le haut */
+    border: 1px solid #ccc;    /* Bordure fine comme les zones de texte */
+    border-radius: 8px;        /* Bordures arrondies */
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;          /* Pour que ce ne soit pas trop large */
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.sondage-container h2 {
+    color: #2e7d32;            /* Le vert que tu utilises déjà */
+    margin-bottom: 15px;
+}
+
+.sondage-form {
+    display: inline-block;
+    text-align: left;          /* Aligne les boutons radio à gauche */
+    margin-top: 20px;
+}
+
+.sondage-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style du bouton pour qu'il ressemble au bouton "Publier" */
+.btn-voter {
+    background-color: #2e7d32; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.btn-voter:hover {
+    background-color: #215d25; /* Un vert plus foncé au survol */
+}
