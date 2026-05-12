@@ -284,23 +284,37 @@
 
     <!-- SONDAGE -->
     <section class="sondage-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">📊 Votre avis compte</span>
-                <h2>Sondage de la semaine</h2>
-                <p>Aidez-nous à prioriser nos actions</p>
-            </div>
-            <section id="sondage" class="sondage-container">
-    <h2>Nouveau Sondage : Développement de Mossendjo</h2>
-    <p>Selon vous, quel projet est le plus urgent ?</p>
-    
-    <form class="sondage-form">
-        <label><input type="radio" name="projet" value="ecole"> Réparation des bancs scolaires</label><br>
-        <label><input type="radio" name="projet" value="eclairage"> Éclairage public</label><br>
-        <label><input type="radio" name="projet" value="sante"> Pharmacie communautaire</label><br>
-        <button type="button" class="btn-voter" onclick="voter()">Envoyer mon avis</button>
-    </form>
-</section>
+       <div class="container">
+        <div class="section-header">
+            <span class="section-tag">📊 Votre avis compte</span>
+            <h2>Sondage de la semaine</h2>
+            <p>Aidez-nous à prioriser nos actions</p>
+        </div>
+
+        <div class="sondage-container">
+            <h3>Nouveau Sondage : Développement de Mossendjo</h3>
+            <p>Selon vous, quel projet est le plus urgent ?</p>
+            
+            <form class="sondage-form">
+                <label class="sondage-option">
+                    <input type="radio" name="projet" value="ecole"> 
+                    <span>Réparation des bancs scolaires</span>
+                </label>
+                
+                <label class="sondage-option">
+                    <input type="radio" name="projet" value="eclairage"> 
+                    <span>Éclairage public</span>
+                </label>
+                
+                <label class="sondage-option">
+                    <input type="radio" name="projet" value="sante"> 
+                    <span>Pharmacie communautaire</span>
+                </label>
+                
+                <button type="button" class="btn-sondage" onclick="voter()">Envoyer mon avis</button>
+            </form>
+        </div>
+    </div>
 
     <!-- AVIS -->
     <section class="avis-section">
@@ -486,6 +500,25 @@
             }
         }
     </script>
+    <script>
+function voter() {
+    const options = document.getElementsByName('projet');
+    let selectionne = false;
+
+    for (const option of options) {
+        if (option.checked) {
+            selectionne = true;
+            break;
+        }
+    }
+
+    if (selectionne) {
+        alert("Merci pour votre vote ! Votre avis a bien été pris en compte pour le développement de Mossendjo.");
+    } else {
+        alert("Veuillez sélectionner un projet avant d'envoyer votre avis.");
+    }
+}
+</script>
 
 </body>
 </html>
