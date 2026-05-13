@@ -1,21 +1,22 @@
 {
-    "name": "Mossendjo en Marche",
-    "short_name": "Mossendjo",
-    "description": "Mouvement citoyen pour le développement de Mossendjo",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#0f3d1a",
-    "theme_color": "#0f3d1a",
-    "icons": [
-        {
-            "src": "logo.png.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "logo.png.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ]
+  "name": "Mossendjo en Marche",
+  "short_name": "Mossendjo",
+  "description": "Mouvement citoyen pour le développement de Mossendjo",
+  "start_url": "/mossendjo-en-marche/",
+  "scope": "/mossendjo-en-marche/",
+  "display": "standalone",
+  "background_color": "#0f3d1a",
+  "theme_color": "#0f3d1a",
+  "icons": [
+    {
+      "src": "logo.png.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo.png.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
