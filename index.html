@@ -118,7 +118,7 @@
             </div>
             <div class="cartes-grid">
                 <div class="carte">
-                    <img src="postQueueImg_18.jpg" alt="Education">
+                    <img src="image/postQueueImg_18.jpg" alt="Education">
                     <div class="carte-body">
                         <div class="carte-icon">📚</div>
                         <h3>Éducation</h3>
@@ -126,7 +126,7 @@
                     </div>
                 </div>
                 <div class="carte">
-                    <img src="Screenshot_20260510-125034.jpg" alt="Entrepreneuriat">
+                    <img src="image/Screenshot_20260510-125034.jpg" alt="Entrepreneuriat">
                     <div class="carte-body">
                         <div class="carte-icon">💼</div>
                         <h3>Entrepreneuriat</h3>
@@ -134,7 +134,7 @@
                     </div>
                 </div>
                 <div class="carte">
-                    <img src="Screenshot_20260510-125204~2.jpg" alt="Formation">
+                    <img src="image/Screenshot_20260510-125204~2.jpg" alt="Formation">
                     <div class="carte-body">
                         <div class="carte-icon">🎓</div>
                         <h3>Formation des jeunes</h3>
@@ -142,18 +142,20 @@
                     </div>
                 </div>
                 <div class="carte">
-                    <img src="Revival-of-Wheat-Farming-in-Lubero-2.jpg" alt="Environnement">
+                    <img src="image/Revival-of-Wheat-Farming-in-Lubero-2.jpg" alt="Environnement">
                     <div class="carte-body">
                         <div class="carte-icon">🌿</div>
                         <h3>Environnement</h3>
                         <p>Promouvoir l'agriculture durable et protéger l'environnement naturel de Mossendjo.</p>
                     </div>
                 </div>
-                <div class="carte carte-sante">
+                <div class="carte">
+                    <img src="image/bd73007b82d214045dc764538b36dafa.jpg" alt="Santé">
                     <div class="carte-body">
-                        <div class="carte-icon">🏥</div>
+                        <div class="carte-icon">🌿</div>
                         <h3>Santé</h3>
                         <p>Améliorer l'accès aux soins de santé pour toutes les populations de Mossendjo.</p>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -169,6 +171,10 @@
             </div>
             <div class="compteur-box">
                 <div class="grand-compteur" id="compteur-main">100</div>
+                <div class="admin-compteur">
+    <button onclick="ajouterMembre()" class="btn-plus">+ Ajouter un membre</button>
+    <button onclick="retirerMembre()" class="btn-moins">- Retirer un membre</button>
+</div
                 <p>membres engagés venus de Mossendjo et de la diaspora</p>
                 <div class="compteur-barre">
                     <div class="barre-progress" id="barre"></div>
@@ -414,7 +420,7 @@
             <img src="logo.png.png" alt="Logo" class="footer-logo">
             <p><strong>Mossendjo en Marche</strong></p>
             <p>Unis pour le développement de notre ville</p>
-            <p class="footer-copy">© 2026 Mossendjo en Marche. Tous droits réservés.</p>
+            <p class="footer-copy">© 2026 Mossendjo en Marche. Ruben BIDOUNDA.</p>
         </div>
     </footer>
 
@@ -477,6 +483,23 @@
             document.getElementById('message').value = '';
             afficherAvis();
         }
+        // ── COMPTEUR MEMBRES ──
+let nbMembres = parseInt(localStorage.getItem('membres') || '100');
+document.getElementById('compteur-main').textContent = nbMembres + '+';
+
+function ajouterMembre() {
+    nbMembres++;
+    localStorage.setItem('membres', nbMembres);
+    document.getElementById('compteur-main').textContent = nbMembres + '+';
+    document.getElementById('compteur-hero').textContent = nbMembres + '+';
+}
+
+function retirerMembre() {
+    if (nbMembres > 0) nbMembres--;
+    localStorage.setItem('membres', nbMembres);
+    document.getElementById('compteur-main').textContent = nbMembres + '+';
+    document.getElementById('compteur-hero').textContent = nbMembres + '+';
+}
 
         function afficherAvis() {
             const avis = JSON.parse(localStorage.getItem('avis') || '[]');
@@ -563,6 +586,7 @@ async function voter() {
     }
 }
 </script>
+
 
 </body>
 </html>
