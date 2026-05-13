@@ -585,6 +585,9 @@ async function voter() {
         bouton.style.opacity = "1";
     }
 }
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+}
 </script>
 
 
